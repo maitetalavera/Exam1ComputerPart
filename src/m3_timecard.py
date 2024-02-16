@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE: 1. (3 pts)
 #
 #   In this module, we are going to create a program that will help the user
 #   calculate how much they earned in week at work.
@@ -21,8 +21,11 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def get_hours(day_of_week):
+    return float(input(f"How many hours did you work on {day_of_week}"))
+
 ###############################################################################
-# TODO: 2. (3 pts)
+# DONE: 2. (3 pts)
 #
 #   Now, write a function called calculate_hours() that takes 5 keyword
 #   arguments:
@@ -37,8 +40,11 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def calculate_hours(mon, tues, wed, thurs, fri):
+    return float(mon + tues + wed + thurs + fri)
+
 ###############################################################################
-# TODO: 3. (3 pts)
+# DONE: 3. (3 pts)
 #
 #   Next, write a function called calculate_pay() that takes two parameters:
 #       - total_hours   <-- float
@@ -56,6 +62,10 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+def calculate(total_hours, pay_rate):
+    result=total_hours * pay_rate
+    return result
 
 ###############################################################################
 # TODO: 4. (9 pts)
@@ -103,3 +113,17 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+def main(): 
+    print("Let's calculate your pay!")
+    mon1=get_hours("Monday")
+    tues1=get_hours("Tuesday")
+    wed1=get_hours("Wednesday")
+    thurs1=get_hours("Thursday")
+    fri1=get_hours("Friday")
+    final_hours=calculate_hours(mon=mon1, tues=tues1, wed=wed1, thurs=thurs1, fri=fri1)
+    return input("How much are you currently getting paid per hour?")
+
+
+
+
