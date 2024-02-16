@@ -116,13 +116,17 @@ def calculate(total_hours, pay_rate):
 
 def main(): 
     print("Let's calculate your pay!")
-    mon1=get_hours("Monday")
-    tues1=get_hours("Tuesday")
-    wed1=get_hours("Wednesday")
-    thurs1=get_hours("Thursday")
-    fri1=get_hours("Friday")
-    final_hours=calculate_hours(mon=mon1, tues=tues1, wed=wed1, thurs=thurs1, fri=fri1)
-    return input("How much are you currently getting paid per hour?")
+    mon1=get_hours("Monday:")
+    tues1=get_hours("Tuesday:")
+    wed1=get_hours("Wednesday:")
+    thurs1=get_hours("Thursday:")
+    fri1=get_hours("Friday:")
+    total_hours=calculate_hours(mon=mon1, tues=tues1, wed=wed1, thurs=thurs1, fri=fri1)
+    pay_rate=input("How much are you currently getting paid per hour? ")
+    total_pay=calculate(total_hours, pay_rate)
+
+
+main()
 
 
 

@@ -50,7 +50,7 @@ def name():
     return input('Please enter your name: ')
 
 ###############################################################################
-# TODO: 3. (9 pts)
+# DONE: 3. (9 pts)
 #
 #   Now, let's put it all together.
 #
@@ -79,8 +79,8 @@ def main():
     print("Let's play Mad Libs!")
     user_name=name()
     print(f"Welcome, {user_name}!")
-    noun=get_word(noun)
-    verb=get_word(verb)
-    adjective=get_word(adjective)
-    print(f'This semester, I hope to join the {noun} club and go to {verb}. It is going to be a(n){adjective} semester!')
+    noun=get_word("noun")
+    verb=get_word("verb")
+    adjective=get_word("adjective")
+    print(input(f'This semester, I hope to join the {noun} club and go to {verb}. It is going to be a(n){adjective} semester!'))
 main()
